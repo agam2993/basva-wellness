@@ -1,0 +1,13 @@
+{
+  "name": "basva-wellness",
+  "version": "1.0.0",
+  "description": "Basva Yoga & Wellness Center website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["yoga", "wellness", "mindfulness", "basva"],
+  "author": "agam2993",
+  "license": "MIT"
+}
