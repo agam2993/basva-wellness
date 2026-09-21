@@ -5,6 +5,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initHeaderScroll();
+  initDropdownMenu();
+  initMobileNavigation();
   initBreathingExercise();
   initScheduleTabs();
   initNewsletterForm();
@@ -50,10 +52,11 @@ function updateThemeIcon(isDark) {
 }
 
 /* ==========================================================================
-   2. Header Scroll Effect
+   2. Header & Navigation Interactivity
    ========================================================================== */
 function initHeaderScroll() {
   const header = document.querySelector('.site-header');
+  if (!header) return;
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) {
       header.classList.add('scrolled');
@@ -61,6 +64,67 @@ function initHeaderScroll() {
       header.classList.remove('scrolled');
     }
   }, { passive: true });
+}
+
+function initDropdownMenu() {
+  const dropdownItem = document.querySelector('.nav-dropdown-item');
+  const dropdownToggle = document.querySelector('.dropdown-toggle');
+  const dropdownMenu = document.querySelector('.dropdown-menu');
+
+  if (!dropdownItem || !dropdownToggle) return;
+
+  dropdownToggle.addEventListener('click', (e) => {
+    if (window.innerWidth <= 880) return;
+    const isExpanded = dropdownToggle.getAttribute('aria-expanded') === 'true';
+    dropdownToggle.setAttribute('aria-expanded', !isExpanded);
+  });
+
+  if (dropdownMenu) {
+    const dropdownLinks = dropdownMenu.querySelectorAll('.dropdown-link');
+    dropdownLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        dropdownToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+}
+
+function initMobileNavigation() {
+  const toggleBtn = document.getElementById('mobileNavToggle');
+  const closeBtn = document.getElementById('mobileNavClose');
+  const drawer = document.getElementById('mobileNavDrawer');
+  const backdrop = document.getElementById('mobileNavBackdrop');
+
+  if (!toggleBtn || !drawer) return;
+
+  function openDrawer() {
+    drawer.classList.add('active');
+    drawer.setAttribute('aria-hidden', 'false');
+    toggleBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove('active');
+    drawer.setAttribute('aria-hidden', 'true');
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  toggleBtn.addEventListener('click', openDrawer);
+  if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+  if (backdrop) backdrop.addEventListener('click', closeDrawer);
+
+  const drawerLinks = drawer.querySelectorAll('a');
+  drawerLinks.forEach(link => {
+    link.addEventListener('click', closeDrawer);
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('active')) {
+      closeDrawer();
+    }
+  });
 }
 
 /* ==========================================================================

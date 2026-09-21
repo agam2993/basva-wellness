@@ -22,21 +22,70 @@
   <header class="site-header" id="siteHeader">
     <div class="container nav-container">
       <a href="#hero" class="brand-logo" id="brandLogo">
-        <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-2.38 1.05-4.52 2.73-5.99.33.64.84 1.25 1.52 1.76 1.74 1.3 3.93 1.23 3.75 4.23h-.01c1.47-1.39 2.01-3.66 1.13-5.59 2.45 1.29 4.14 3.71 4.41 6.55.07.72.07 1.45-.03 2.16C16.32 18.84 14.28 20 12 20z" fill="currentColor" fill-opacity="0.12"/>
-        </svg>
-        <div>
-          <span>Basva</span>
-          <span class="brand-tagline">Yoga, Wellness & Training Center</span>
+        <div class="brand-icon-wrap">
+          <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8 0-2.38 1.05-4.52 2.73-5.99.33.64.84 1.25 1.52 1.76 1.74 1.3 3.93 1.23 3.75 4.23h-.01c1.47-1.39 2.01-3.66 1.13-5.59 2.45 1.29 4.14 3.71 4.41 6.55.07.72.07 1.45-.03 2.16C16.32 18.84 14.28 20 12 20z" fill="currentColor" fill-opacity="0.16"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Basva</span>
+          <span class="brand-tagline">Yoga • Wellness • Training</span>
         </div>
       </a>
 
-      <nav>
+      <nav class="main-nav" aria-label="Main Navigation">
         <ul class="nav-links">
           <li><a href="#hero" id="navHome">Sanctuary</a></li>
-          <li><a href="#breathing" id="navBreath">Mindful Breath</a></li>
-          <li><a href="#offerings" id="navOfferings">Offerings</a></li>
-          <li><a href="#swimming" id="navSwimming">Swimming & Jal Yoga</a></li>
+          
+          <!-- Offerings with Sub-menu Dropdown -->
+          <li class="nav-dropdown-item">
+            <a href="#offerings" id="navOfferings" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+              <span>Offerings</span>
+              <svg class="dropdown-arrow" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M6 9l6 6 6-6"/>
+              </svg>
+            </a>
+            <div class="dropdown-menu" role="menu" aria-label="Offerings Sub-menu">
+              <a href="#offerings" class="dropdown-link" role="menuitem">
+                <span class="dropdown-icon-box">🧘‍♀️</span>
+                <div class="dropdown-info">
+                  <strong class="dropdown-title">Vinyasa & Hatha Flow</strong>
+                  <span class="dropdown-desc">Mindful dynamic movement & restorative poses</span>
+                </div>
+              </a>
+              <a href="#offerings" class="dropdown-link" role="menuitem">
+                <span class="dropdown-icon-box">🔔</span>
+                <div class="dropdown-info">
+                  <strong class="dropdown-title">Tibetan Sound Bath</strong>
+                  <span class="dropdown-desc">Harmonic quartz acoustic healing</span>
+                </div>
+              </a>
+              <a href="#offerings" class="dropdown-link" role="menuitem">
+                <span class="dropdown-icon-box">🫁</span>
+                <div class="dropdown-info">
+                  <strong class="dropdown-title">Pranayama & Meditation</strong>
+                  <span class="dropdown-desc">Sacred breath control & inner serenity</span>
+                </div>
+              </a>
+              
+              <div class="dropdown-separator"></div>
+
+              <a href="#swimming" class="dropdown-link highlight-dropdown" role="menuitem">
+                <span class="dropdown-icon-box swim-icon-box">🏊‍♂️</span>
+                <div class="dropdown-info">
+                  <div class="dropdown-title-badge-row">
+                    <strong class="dropdown-title swim-title">Swimming & Jal Yoga</strong>
+                    <span class="swim-badge">Featured</span>
+                  </div>
+                  <span class="dropdown-desc">Fear to Freestyle in 8–10 Days • Aquatic Fitness</span>
+                </div>
+                <svg class="dropdown-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M9 18l6-6-6-6"/>
+                </svg>
+              </a>
+            </div>
+          </li>
+
           <li><a href="#schedule" id="navSchedule">Daily Rhythm</a></li>
           <li><a href="#testimonials" id="navTestimonials">Testimonials</a></li>
           <li><a href="#contactSection" id="navContact">Contact Us</a></li>
@@ -49,10 +98,60 @@
             <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
           </svg>
         </button>
-        <a href="#breathing" class="btn-primary" id="headerCtaBtn">Breathe With Us</a>
+        <a href="tel:+919844729232" class="header-contact-btn" id="headerContactBtn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <span>Call Us</span>
+        </a>
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+    <div class="mobile-nav-content">
+      <div class="mobile-nav-header">
+        <div class="brand-text">
+          <span class="brand-name">Basva</span>
+          <span class="brand-tagline">Yoga • Wellness • Training</span>
+        </div>
+        <button class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu">&times;</button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="#hero" class="mobile-nav-item">Sanctuary</a></li>
+        <li class="mobile-nav-group">
+          <span class="mobile-nav-heading">Offerings</span>
+          <ul class="mobile-sub-links">
+            <li><a href="#offerings" class="mobile-sub-item">🧘‍♀️ Vinyasa & Hatha Flow</a></li>
+            <li><a href="#offerings" class="mobile-sub-item">🔔 Tibetan Sound Bath</a></li>
+            <li><a href="#offerings" class="mobile-sub-item">🫁 Pranayama & Meditation</a></li>
+            <li><a href="#swimming" class="mobile-sub-item highlight-mobile-swim">🏊‍♂️ Swimming & Jal Yoga <span class="swim-badge">Featured</span></a></li>
+          </ul>
+        </li>
+        <li><a href="#schedule" class="mobile-nav-item">Daily Rhythm</a></li>
+        <li><a href="#testimonials" class="mobile-nav-item">Testimonials</a></li>
+        <li><a href="#contactSection" class="mobile-nav-item">Contact Us</a></li>
+      </ul>
+      <div class="mobile-nav-footer">
+        <a href="tel:+919844729232" class="mobile-action-btn mobile-call-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          <span>Call: +91 98447 29232</span>
+        </a>
+        <a href="https://wa.me/919844729232" target="_blank" rel="noopener noreferrer" class="mobile-action-btn mobile-wa-btn">
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+    <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+  </div>
 
   <!-- Hero Section -->
   <section class="hero-section" id="hero">
