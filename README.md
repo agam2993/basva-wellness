@@ -4,6 +4,29 @@ A modern, serene, and responsive website built for the **Basva Yoga & Wellness C
 
 ---
 
+## 🌐 Live URL & Repository
+
+- **Production URL**: [https://basva-wellness.vercel.app](https://basva-wellness.vercel.app)
+- **GitHub Repository**: [https://github.com/agam2993/basva-wellness](https://github.com/agam2993/basva-wellness)
+- **Vercel Project Dashboard**: [https://vercel.com/agam-2993/basva-wellness](https://vercel.com/agam-2993/basva-wellness)
+
+---
+
+## 🔄 CI/CD Deployment Workflow
+
+This project follows the continuous deployment lifecycle:
+1. **Make changes locally** in `d:\Basva`
+2. **Preview and test** in your browser (`index.html`)
+3. **Commit & Push to GitHub**:
+   ```bash
+   git add .
+   git commit -m "Update sanctuary details"
+   git push
+   ```
+4. **Automatic Vercel Deployment**: Vercel detects the push and deploys the update immediately to the edge network.
+
+---
+
 ## ✨ Features Included
 
 1. **"Hello Basva" Sanctuary Hero**:
@@ -29,39 +52,11 @@ A modern, serene, and responsive website built for the **Basva Yoga & Wellness C
 
 ---
 
-## 🚀 How to Deploy to Vercel
-
-This repository is already configured with `vercel.json` for zero-configuration, lightning-fast deployment on Vercel.
-
-### Method 1: Deploy via Vercel Dashboard (Easiest - 1 Minute)
-1. Go to [vercel.com](https://vercel.com) and log in or create a free account.
-2. Click **"Add New..."** → **"Project"**.
-3. Import your Git repository (GitHub/GitLab/Bitbucket).
-4. Vercel will automatically detect the static project. Click **"Deploy"**.
-5. Your live URL will be ready immediately!
-
-### Method 2: Deploy via Vercel CLI
-If you have Node.js and the Vercel CLI installed:
-```bash
-# In this directory (d:\Basva):
-npx vercel
-```
-Follow the quick prompts (accept defaults). To deploy to production:
-```bash
-npx vercel --prod
-```
-
-### Method 3: Drag & Drop (Instant Preview)
-1. Go to [vercel.com/new](https://vercel.com/new).
-2. Drag and drop the `Basva` project folder directly into the browser.
-3. Your site will be deployed instantly with a public `.vercel.app` URL.
-
----
-
 ## 📁 File Structure
 
 ```text
-d:\Basva\
+d:\Basva/
+├── .gitignore        # Git ignore rules
 ├── index.html        # Main landing page with Hello Basva hero & sections
 ├── styles.css        # Vanilla CSS design system, dark mode & animations
 ├── script.js         # Interactive breathing logic, schedule tabs, audio chime
