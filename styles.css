@@ -962,8 +962,8 @@ button {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 1.8fr 1fr 1fr 1.3fr;
+  gap: 2.5rem;
   margin-bottom: 3rem;
 }
 
@@ -999,6 +999,40 @@ button {
 
 .footer-col a:hover {
   color: var(--color-accent);
+}
+
+.footer-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.footer-contact-link svg {
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.footer-contact-link:hover {
+  transform: translateX(3px);
+}
+
+.footer-contact-link.phone-link:hover {
+  color: var(--color-accent);
+}
+
+.footer-contact-link.whatsapp-link:hover {
+  color: #25d366;
+}
+
+.footer-contact-link.fb-link:hover {
+  color: #1877f2;
+}
+
+.footer-contact-link.yt-link:hover {
+  color: #ff0000;
 }
 
 .footer-bottom {
