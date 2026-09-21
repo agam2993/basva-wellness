@@ -478,15 +478,15 @@ button {
   border-color: var(--color-accent);
 }
 
-.header-contact-btn {
+#headerCtaBtn {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  padding: 0.55rem 1.15rem;
-  background: var(--color-primary);
+  gap: 0.5rem;
+  padding: 0.65rem 1.45rem;
+  background-color: var(--color-primary);
   color: #ffffff !important;
   border-radius: var(--radius-full);
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   text-decoration: none;
@@ -495,14 +495,14 @@ button {
   white-space: nowrap;
 }
 
-.header-contact-btn::after {
+#headerCtaBtn::after {
   display: none !important;
 }
 
-.header-contact-btn:hover {
-  background: var(--color-primary-light);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(45, 66, 51, 0.28);
+#headerCtaBtn:hover {
+  background-color: var(--color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(45, 66, 51, 0.28);
   color: #ffffff !important;
 }
 
@@ -1884,9 +1884,15 @@ button {
   transition: all var(--transition-fast);
 }
 
-.mobile-call-btn {
+.mobile-breathe-btn {
   background: var(--color-primary);
   color: #ffffff;
+}
+
+.mobile-call-btn {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
 }
 
 .mobile-wa-btn {
@@ -1903,7 +1909,7 @@ button {
     display: flex;
   }
 
-  .header-contact-btn {
+  #headerCtaBtn {
     display: none;
   }
 }
