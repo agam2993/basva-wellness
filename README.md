@@ -4,7 +4,7 @@ A modern, serene, and responsive website built for the **Basva Yoga & Wellness C
 
 ---
 
-## 🌐 Live URL & Repository
+## 🌐 Live URLs & Repository
 
 - **Production URL**: [https://basva-wellness.vercel.app](https://basva-wellness.vercel.app)
 - **GitHub Repository**: [https://github.com/agam2993/basva-wellness](https://github.com/agam2993/basva-wellness)
@@ -12,18 +12,40 @@ A modern, serene, and responsive website built for the **Basva Yoga & Wellness C
 
 ---
 
-## 🔄 CI/CD Deployment Workflow
+## 🌿 Branching & Deployment Model
 
-This project follows the continuous deployment lifecycle:
-1. **Make changes locally** in `d:\Basva`
-2. **Preview and test** in your browser (`index.html`)
-3. **Commit & Push to GitHub**:
-   ```bash
-   git add .
-   git commit -m "Update sanctuary details"
-   git push
-   ```
-4. **Automatic Vercel Deployment**: Vercel detects the push and deploys the update immediately to the edge network.
+This project follows a professional two-branch strategy:
+
+| Branch | Purpose | Vercel Environment |
+| :--- | :--- | :--- |
+| **`main`** | **Production Only** | Deploys live to [https://basva-wellness.vercel.app](https://basva-wellness.vercel.app) |
+| **`develop`** | **Active Development** | Local development and preview testing |
+
+### Everyday Development Workflow
+
+#### 1. Daily Development (on `develop`):
+```bash
+# Ensure you are on develop
+git checkout develop
+
+# Make your changes, then test locally in your browser
+git add .
+git commit -m "feat: your new feature"
+git push origin develop
+```
+
+#### 2. Release to Production (deploy via `main`):
+```bash
+# Switch to main and merge develop
+git checkout main
+git merge develop
+
+# Push to main to trigger live Vercel production deployment
+git push origin main
+
+# Switch back to develop for next tasks
+git checkout develop
+```
 
 ---
 
