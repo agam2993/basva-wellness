@@ -1,6 +1,6 @@
-# Basva Yoga & Wellness Center 🌿
+# Basva Yoga, Wellness and Training Center 🌿
 
-A modern, serene, and responsive website built for the **Basva Yoga & Wellness Center**, featuring a welcoming **"Hello Basva"** greeting, interactive mindful breathing guide, daily class rhythm, and holistic wellness offerings.
+A modern, serene, and responsive website built for the **Basva Yoga, Wellness and Training Center**, featuring a welcoming **"Hello Basva"** greeting, interactive mindful breathing guide, daily class rhythm, and holistic wellness offerings.
 
 ---
 

@@ -1,7 +1,7 @@
 {
   "name": "basva-wellness",
   "version": "1.0.0",
-  "description": "Basva Yoga & Wellness Center website",
+  "description": "Basva Yoga, Wellness and Training Center website",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

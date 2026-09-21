@@ -45,5 +45,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`🌿 Basva Yoga & Wellness local server running at http://localhost:${PORT}/`);
+  console.log(`🌿 Basva Yoga, Wellness and Training Center local server running at http://localhost:${PORT}/`);
 });
